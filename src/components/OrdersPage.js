@@ -1,15 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeOrder } from '../redux/OrderSlice';
 
 
 const OrdersPage = () => {
   const ordersData = useSelector(state => state.order.orders)
-  console.log(ordersData)
-
+  const dispatch=useDispatch();
   let totalCost = 0;
   ordersData.forEach(element => {
     totalCost += element.price
-  });
+  })
+  const cancelOrder=(id)=>{
+    dispatch(removeOrder(id));
+  }
   return (
     <div>
       <center>
@@ -25,6 +28,7 @@ const OrdersPage = () => {
                       <h5 className='card-title'>{item.name}</h5>
                       <p>Rs :{item.price}</p>
                       <p>Table No: {item.tableNum}</p>
+                      <button className='btn btn-danger' onClick={()=>cancelOrder(item.id)}>Cancel</button>
 
 
                     </div>
