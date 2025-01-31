@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, rgba(0, 140, 255, 0.8), rgba(0, 204, 255, 0.6)); /* Gradient background */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Content Container */
+.content-container {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px); /* Soft blur effect on background */
+}
+
+/* Header Styles */
+h1, h2, h3 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #4e4e4e;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #3498db;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #2ecc71;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  text-align: left;
+  padding: 20px;
+}
+
+.card-img-top {
+  border-radius: 12px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #2980b9;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+/* Modal Styling */
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 25px;
+  font-size: 1.2rem;
+}
+
+.modal-footer {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 30px;
+  }
+  .card {
+    margin: 15px;
+  }
+}
