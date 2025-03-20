@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <div className='m-2'>
         <center >
-            <span className='h4 m-1'>Filter</span>
+            <span className=' m-1'>Filter: </span>
             <select onChange={(e)=>onSubmitHandler(e.target.value)} className='m-1'>
                 {categories.map((item,index)=>(
                     <option value={item} key={index}>{item}</option>

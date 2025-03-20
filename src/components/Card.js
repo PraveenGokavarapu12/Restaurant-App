@@ -3,7 +3,7 @@ import menuItems from '../data';
 import { useDispatch, useSelector } from 'react-redux';
 import { placeOrder } from '../redux/OrderSlice';
 
-const Card = ({ tableNum }) => {
+const Card = ({ tableNum,sortOrder }) => {
     const filteredCat = useSelector((state) => state.filter.value);
     const [orderPlaced, setOrderPlaced] = useState(false);
     const dispatch = useDispatch();
@@ -14,6 +14,13 @@ const Card = ({ tableNum }) => {
     } else {
         filteredData = menuItems.filter((item) => item.category === filteredCat);
     }
+
+    if (sortOrder === "asc") {
+        filteredData.sort((a, b) => a.price - b.price);
+      } else if (sortOrder === "desc") {
+        filteredData.sort((a, b) => b.price - a.price);
+      }
+  
 
     const onClickOrder = (item) => {
         if (tableNum === null) {
