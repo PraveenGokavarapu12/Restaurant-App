@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <div>
       <nav className='navbar navbar-light bg-light'>
-        <a className='navbar-brand m-2'>Restaurant</a>
+        <a className='navbar-brand m-2'>OrderEase</a>
         <button className='btn btn-primary m-2' onClick={()=>navigate('/orders')}>Orders <span className='badge bg-secondary'>{orderslen}</span></button>
       </nav>
     </div>
